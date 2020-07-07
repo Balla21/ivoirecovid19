@@ -30,5 +30,5 @@ def homepage() :
 
 
 if __name__ == "__main__" :
-    app.run(host="https://ivoirecovid19.herokuapp.com")
+    app.run()
    
