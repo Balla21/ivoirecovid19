@@ -1,1 +1,1 @@
-web:  gunicorn wsgi:ivoirecovid19
+web:  gunicorn app:ivoirecovid19
