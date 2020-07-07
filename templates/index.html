@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block title %} IvoireCovid19 | tracker {% endblock %}
+
+{% block content %}
+<div class="container mt-3" >
+        <h4 class="mt-3 text-center"> <u> Covid-19 report:  </u>  </h4>
+
+        <div class=" mt-4 col-md-10 mx-auto">
+                <div class="card text-center">
+                  <div class="card-header font-weight-bolder"> {{ data["civ"]["country"] }} / Ivory Coast
+                    <a href="https://en.wikipedia.org/wiki/Ivory_Coast" title="Ivory Coast logo">
+                        <img src="{{ url_for('static', filename = 'img/civ-logo.png')  }}"  />
+                    </a>
+                  </div>
+                  <div class="card-body table-responsive">
+                      <table class="table ">
+                          <thead>
+                            <tr>
+                                <th scope="col">Population </th>
+                                <th scope="col"> Tests</th>
+                                <th scope="col">cases confirmed</th>
+                                <th scope="col">Today cases </th>
+                                <th scope="col">Deaths </th>
+                                <th scope="col">Today deaths</th>
+                                <th scope="col"> Recovered</th>
+                                <th scope="col"> Today Recovered</th>
+                                <th scope="col"> Active</th>
+                            </tr>
+                          </thead>
+                           <tbody>
+                            <tr>
+                                <td> {{ data["civ"]["population"] }}</td>
+                                <td> {{ data["civ"]["tests"] }} </td>
+                                <td> {{ data["civ"]["cases"] }} </td>
+                                <td> {{ data["civ"]["todayCases"] }} </td>
+                                <td> {{ data["civ"]["deaths"] }}</td>
+                                <td> {{ data["civ"]["todayDeaths"] }} </td>
+                                <td> {{ data["civ"]["recovered"] }} </td>
+                                <td> {{ data["civ"]["todayRecovered"] }} </td>
+                                <td> {{ data["civ"]["active"] }} </td>
+                            </tr>
+                          </tbody>
+                      </table>
+
+                    <a href="https://news.google.com/covid19/map?hl=en-US&mid=/m/0fv4v&gl=US&ceid=US:en" target="_blank"
+                       class="btn btn-primary">
+                        More Info
+                    </a>
+                  </div>
+
+
+                 <div class="card-footer text-muted">
+                     <p class="font-italic">Last update on : {{ data["date"].strftime('%A, %d %B %Y :@ %H:%M:%S') }} </p>
+                 </div>
+                </div>
+            </div>
+
+            <hr>
+
+    <div class=" mt-4 col-md-10 mx-auto">
+                 <div class=" mt-3 col-md-10 mx-auto">
+                <div class="card text-center">
+                  <div class="card-header font-weight-bolder"> Afrique / {{ data["africa"]["continent"] }} </div>
+                  <div class="card-body table-responsive">
+                      <table class="table ">
+                          <thead>
+                            <tr>
+                                <th scope="col">Population </th>
+                                <th scope="col"> Tests</th>
+                                <th scope="col">cases confirmed</th>
+                                <th scope="col">Today cases </th>
+                                <th scope="col">Deaths </th>
+                                <th scope="col">Today deaths</th>
+                                <th scope="col"> Recovered</th>
+                                <th scope="col"> Today Recovered</th>
+                                <th scope="col"> Active</th>
+                            </tr>
+                          </thead>
+                           <tbody>
+                            <tr>
+                                <td> {{ data["africa"]["population"] }} </td>
+                                <td> {{ data["africa"]["tests"] }}</td>
+                                <td> {{ data["africa"]["cases"] }}</td>
+                                <td> {{ data["africa"]["todayCases"] }}</td>
+                                <td> {{ data["africa"]["deaths"] }}</td>
+                                <td> {{ data["africa"]["todayDeaths"] }}</td>
+                                <td> {{ data["africa"]["recovered"] }}</td>
+                                <td> {{ data["africa"]["todayRecovered"] }}</td>
+                                <td> {{ data["africa"]["active"] }}</td>
+                            </tr>
+                          </tbody>
+                      </table>
+
+                    <a href="https://news.google.com/covid19/map?hl=en-US&mid=/m/0fv4v&gl=US&ceid=US:en" target="_blank"
+                       class="btn btn-primary">
+                        More Info
+                    </a>
+                  </div>
+
+
+                 <div class="card-footer text-muted">
+                     <p class="font-italic">Last update on : {{ data["date"].strftime('%A, %d %B %Y :@ %H:%M:%S') }} </p>
+                 </div>
+                </div>
+            </div>
+
+</div>
+</div>
+
+{% endblock %}
