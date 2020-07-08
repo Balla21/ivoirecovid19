@@ -81,7 +81,7 @@
 
           <h5> <u> Covid-19 protections </u></h5>
           <ul>
-            {% for protection in data["symptoms"] %}
+            {% for protection in data["protections"] %}
               <li> {{ protection|title  }} </li>
             {% endfor %}
           </ul>
@@ -108,9 +108,6 @@
         </div>
       </nav>
     </footer>
-
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
