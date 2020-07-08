@@ -1,1 +1,1 @@
-web:  gunicorn app:ivoirecovid19
+web:  gunicorn app:app
